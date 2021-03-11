@@ -31,6 +31,9 @@ export default {
     },
     methods: {
         to(path){
+            if(this.$router.history.current.path == path) return
+
+            // console.log("!!!!!!!", this.$router.history.current.path)
             this.$router.push(path)
         },
         initMenu(){

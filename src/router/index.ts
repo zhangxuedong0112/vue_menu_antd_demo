@@ -10,8 +10,13 @@ const routes: RouteConfig[] = [
     component: () => import('../views/layout/web.vue'),
     children: [
         {
-          path: '/',
-          component: () => import('../views/home/index.vue'),
+            path: '/',
+        //   component: () => import('../views/home/index.vue'),
+            redirect:"/home"
+        },
+        {
+            path: '/home',
+            component: () => import('../views/home/index.vue'),
         },
         {
             path: '/demo',
